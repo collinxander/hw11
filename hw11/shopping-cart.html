@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - HW9</title>
+    <!-- Bootstrap CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Main container with Bootstrap styling -->
+    <div class="container mt-5">
+        <!-- Page header -->
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1 class="text-center mb-4 text-primary">Shopping Cart</h1>
+                
+                <!-- Input section for adding new items -->
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Add New Item</h5>
+                    </div>
+                    <div class="card-body">
+                        <!-- Input group for item name and add button -->
+                        <div class="input-group">
+                            <input 
+                                type="text" 
+                                class="form-control" 
+                                id="itemInput" 
+                                placeholder="Enter item name"
+                                aria-label="Item name"
+                            >
+                            <button 
+                                class="btn btn-success" 
+                                type="button" 
+                                id="addItemBtn"
+                            >
+                                Add Item
+                            </button>
+                        </div>
+                        <!-- Error message display area -->
+                        <div id="errorMessage" class="text-danger mt-2" style="display: none;"></div>
+                    </div>
+                </div>
+
+                <!-- Shopping list display section -->
+                <div class="card">
+                    <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Shopping List</h5>
+                        <!-- Item count badge -->
+                        <span class="badge bg-light text-dark fs-6">
+                            Items: <span id="itemCount">0</span>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <!-- List group to display shopping items -->
+                        <ul class="list-group list-group-flush" id="shoppingList">
+                            <!-- Shopping items will be dynamically added here -->
+                        </ul>
+                        <!-- Message when list is empty -->
+                        <div id="emptyMessage" class="text-muted text-center py-4">
+                            Your shopping list is empty. Add some items above!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instructions section -->
+                <div class="card mt-4">
+                    <div class="card-header bg-info text-white">
+                        <h6 class="mb-0">Instructions</h6>
+                    </div>
+                    <div class="card-body">
+                        <ul class="mb-0">
+                            <li>Enter an item name in the input field above</li>
+                            <li>Click "Add Item" or press Enter to add it to your list</li>
+                            <li>Click on any item in the list to remove it</li>
+                            <li>The item count will update automatically</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript for enhanced functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="assets/js/shopping-cart.js"></script>
+</body>
+</html>
